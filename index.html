@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khyber Degree College – Kabal, Swat</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav id="navbar">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-logo">KDC</div>
+    <div class="nav-title">
+      <strong>Khyber Degree College</strong>
+      <span>Kabal, Swat</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">Est. in the Heart of Swat Valley</div>
+    <h1>Welcome to<br><em>Khyber Degree College</em></h1>
+    <p>Nurturing minds, shaping futures — providing quality higher education in Kabal, Swat since our founding.</p>
+    <div class="hero-buttons">
+      <a href="admissions.html" class="btn btn-primary">Apply for Admission</a>
+      <a href="programs.html" class="btn btn-outline">Explore Programs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats ── -->
+<div class="stats">
+  <div class="stat"><div class="num" data-target="1200">0</div><div class="lbl">Enrolled Students</div></div>
+  <div class="stat"><div class="num" data-target="40">0</div><div class="lbl">Faculty Members</div></div>
+  <div class="stat"><div class="num" data-target="7">0</div><div class="lbl">Academic Programs</div></div>
+  <div class="stat"><div class="num" data-target="95">0</div><div class="lbl">% Pass Rate</div></div>
+</div>
+
+<!-- ── About teaser ── -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="College campus" />
+      <div class="img-badge">Kabal, Swat — KPK</div>
+    </div>
+    <div>
+      <p class="section-label">About Us</p>
+      <h2 class="section-title">A Legacy of <span>Academic Excellence</span></h2>
+      <p style="color:var(--muted); margin-bottom:20px;">
+        Khyber Degree College, situated in the scenic Kabal area of Swat, is committed to delivering quality education to the youth of the Swat Valley. Our institution blends traditional values with modern academic standards.
+      </p>
+      <p style="color:var(--muted); margin-bottom: 28px;">
+        Affiliated with the University of Swat, we offer BS degree programs that prepare graduates for higher education and professional careers across Pakistan and beyond.
+      </p>
+      <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Programs teaser ── -->
+<section class="programs" id="programs">
+  <div class="centered">
+    <p class="section-label">Academic Programs</p>
+    <h2 class="section-title">Our <span>Degree Programs</span></h2>
+    <p class="section-desc">We offer BS degree programs across multiple disciplines, empowering students to build expertise in their chosen fields.</p>
+  </div>
+  <div class="programs-grid">
+    <div class="program-card" onclick="openProgramModal('computer-science')">
+      <div class="prog-icon">💻</div>
+      <h3>Computer Science</h3>
+      <p>Learn programming, algorithms, databases, and software engineering. Prepares graduates for careers in IT, software development, and further study in computing.</p>
+      <span class="prog-badge new">New Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" onclick="openProgramModal('english-literature')">
+      <div class="prog-icon">📖</div>
+      <h3>English Literature</h3>
+      <p>Explore British, American, and world literature. Develop critical thinking, research, and communication skills.</p>
+      <span class="prog-badge">BS 4-Year</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" onclick="openProgramModal('zoology')">
+      <div class="prog-icon">🔬</div>
+      <h3>Zoology</h3>
+      <p>Study animal biology, ecology, and wildlife conservation for careers in research and medical fields.</p>
+      <span class="prog-badge">BS 4-Year</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" onclick="openProgramModal('chemistry')">
+      <div class="prog-icon">🧪</div>
+      <h3>Chemistry</h3>
+      <p>Build a strong foundation in organic, inorganic, and physical chemistry for pharmaceutical and research careers.</p>
+      <span class="prog-badge">BS 4-Year</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+  </div>
+  <div class="centered" style="margin-top: 44px;">
+    <a href="programs.html" class="btn btn-primary">View All Programs</a>
+  </div>
+</section>
+
+<!-- ── Program detail modal ── -->
+<div class="modal-overlay" id="programModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeProgramModal()" aria-label="Close">✕</button>
+    <div class="modal-icon" id="modalIcon"></div>
+    <h2 id="modalTitle"></h2>
+    <span class="modal-badge" id="modalBadge"></span>
+    <h3>Core Subjects</h3>
+    <ul class="modal-subjects" id="modalSubjects"></ul>
+    <h3>Career Paths</h3>
+    <div class="modal-careers" id="modalCareers"></div>
+    <div class="modal-note">
+      Plus compulsory courses in all programs: English, Islamic Studies/Ethics, Pakistan Studies, and Communication Skills.
+    </div>
+  </div>
+</div>
+
+<!-- ── Why KDC ── -->
+<section class="why" id="why">
+  <div class="centered">
+    <p class="section-label">Why Choose Us</p>
+    <h2 class="section-title">The <span>KDC Difference</span></h2>
+    <p class="section-desc">We go beyond textbooks to build confident, capable graduates ready for the modern world.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">🏛️</span>
+      <h3>Recognized Institution</h3>
+      <p>Affiliated with the University of Swat and approved by HEC Pakistan.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">👨‍🏫</span>
+      <h3>Expert Faculty</h3>
+      <p>Our teachers hold MPhil and PhD qualifications with years of teaching experience.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">📊</span>
+      <h3>High Result Rate</h3>
+      <p>Consistently strong annual results and top-ranking students in university exams.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🤝</span>
+      <h3>Supportive Community</h3>
+      <p>A welcoming environment where every student is known and mentored personally.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💰</span>
+      <h3>Affordable Fees</h3>
+      <p>Quality education at accessible fees, with merit-based scholarships available.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🏔️</span>
+      <h3>Strategic Location</h3>
+      <p>Situated in Kabal — easily accessible from across the Swat district.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Admission CTA ── -->
+<section class="admission" id="admission">
+  <p class="section-label">Admissions Open</p>
+  <h2 class="section-title">Join <span style="color:var(--gold)">Khyber Degree College</span></h2>
+  <p class="section-desc">Applications for the new academic session are open, including our new Computer Science program.</p>
+  <a href="admissions.html" class="btn btn-primary">View Admission Details</a>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">KDC</div>
+      <p>Khyber Degree College — providing quality higher education to the youth of Swat Valley since our establishment. Affiliated with the University of Swat.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs.html">Computer Science</a></li>
+        <li><a href="programs.html">English Literature</a></li>
+        <li><a href="programs.html">Zoology</a></li>
+        <li><a href="programs.html">Chemistry</a></li>
+        <li><a href="programs.html">Mathematics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Kabal, Swat, KPK</a></li>
+        <li><a href="contact.html">+92-946-XXXXXX</a></li>
+        <li><a href="contact.html">info@khyberdegreecollege.edu.pk</a></li>
+        <li><a href="contact.html">Mon–Sat, 8AM–4PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Khyber Degree College, Kabal, Swat. All rights reserved.</span>
+    <span>Affiliated with University of Swat | HEC Recognized</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/programs-data.js"></script>
+</body>
+</html>

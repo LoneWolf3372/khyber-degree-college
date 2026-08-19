@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Khyber Degree College</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-logo">KDC</div>
+    <div class="nav-title">
+      <strong>Khyber Degree College</strong>
+      <span>Kabal, Swat</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <p class="crumb">Get In Touch</p>
+  <h1>Contact Us</h1>
+  <p>Have questions about admissions, programs, or the college? Reach out — we're here to help.</p>
+</div>
+
+<section class="contact" id="contact" style="padding-top:70px;">
+  <div class="contact-grid">
+    <div>
+      <p class="section-label">Reach Us</p>
+      <h2 class="section-title">Contact <span>Information</span></h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>Khyber Degree College, Kabal Road,<br>Kabal, Swat, Khyber Pakhtunkhwa</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p>+92-946-XXXXXX<br>+92-3XX-XXXXXXX</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>info@khyberdegreecollege.edu.pk</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Office Hours</h4>
+            <p>Monday – Saturday: 8:00 AM – 4:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="tel" placeholder="Phone Number" />
+        </div>
+        <input type="email" placeholder="Email Address" />
+        <select>
+          <option value="">Select Program of Interest</option>
+          <option>Computer Science</option>
+          <option>English Literature</option>
+          <option>Zoology</option>
+          <option>Chemistry</option>
+          <option>Botany</option>
+          <option>Mathematics</option>
+          <option>Urdu / Pashto Literature</option>
+        </select>
+        <textarea placeholder="Your message or query..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="map-placeholder">
+    Map placeholder — embed a Google Maps location for Khyber Degree College, Kabal, Swat here.
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">KDC</div>
+      <p>Khyber Degree College — providing quality higher education to the youth of Swat Valley since our establishment. Affiliated with the University of Swat.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs.html#computer-science">Computer Science</a></li>
+        <li><a href="programs.html#english-literature">English Literature</a></li>
+        <li><a href="programs.html#zoology">Zoology</a></li>
+        <li><a href="programs.html#chemistry">Chemistry</a></li>
+        <li><a href="programs.html#mathematics">Mathematics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Kabal, Swat, KPK</a></li>
+        <li><a href="contact.html">+92-946-XXXXXX</a></li>
+        <li><a href="contact.html">info@khyberdegreecollege.edu.pk</a></li>
+        <li><a href="contact.html">Mon–Sat, 8AM–4PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Khyber Degree College, Kabal, Swat. All rights reserved.</span>
+    <span>Affiliated with University of Swat | HEC Recognized</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

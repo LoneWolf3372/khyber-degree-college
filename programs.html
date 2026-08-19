@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Programs – Khyber Degree College</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-logo">KDC</div>
+    <div class="nav-title">
+      <strong>Khyber Degree College</strong>
+      <span>Kabal, Swat</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="programs.html" class="active">Programs</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <p class="crumb">Academic Programs</p>
+  <h1>Our Degree Programs</h1>
+  <p>Seven BS 4-Year programs, including our newly launched Computer Science degree.</p>
+</div>
+
+<section class="programs" id="programs" style="padding-top:70px;">
+  <div class="programs-grid">
+    <div class="program-card" id="computer-science" onclick="openProgramModal('computer-science')">
+      <div class="prog-icon">💻</div>
+      <h3>Computer Science</h3>
+      <p>Learn programming, algorithms, data structures, databases, computer networks, and software engineering. Prepares graduates for careers in IT, software development, and further studies in computing.</p>
+      <span class="prog-badge new">New Program · BS 4-Year</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" id="english-literature" onclick="openProgramModal('english-literature')">
+      <div class="prog-icon">📖</div>
+      <h3>English Literature</h3>
+      <p>Explore British, American, and world literature. Develop critical thinking, research, and communication skills for careers in education, media, and civil services.</p>
+      <span class="prog-badge">BS 4-Year Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" id="zoology" onclick="openProgramModal('zoology')">
+      <div class="prog-icon">🔬</div>
+      <h3>Zoology</h3>
+      <p>Study animal biology, ecology, and wildlife conservation. Ideal preparation for careers in research, environmental science, veterinary, and medical fields.</p>
+      <span class="prog-badge">BS 4-Year Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" id="chemistry" onclick="openProgramModal('chemistry')">
+      <div class="prog-icon">🧪</div>
+      <h3>Chemistry</h3>
+      <p>Build a strong foundation in organic, inorganic, and physical chemistry. Opens doors to pharmaceuticals, research, and industrial sciences.</p>
+      <span class="prog-badge">BS 4-Year Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" id="botany" onclick="openProgramModal('botany')">
+      <div class="prog-icon">🌿</div>
+      <h3>Botany</h3>
+      <p>Discover the plant kingdom — from cell biology to ecology. Prepares students for agriculture, environmental management, and biotech sectors.</p>
+      <span class="prog-badge">BS 4-Year Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" id="mathematics" onclick="openProgramModal('mathematics')">
+      <div class="prog-icon">🔢</div>
+      <h3>Mathematics</h3>
+      <p>Master pure and applied mathematics. A versatile degree opening paths in finance, engineering, computing, and academia.</p>
+      <span class="prog-badge">BS 4-Year Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+    <div class="program-card" id="urdu-pashto" onclick="openProgramModal('urdu-pashto')">
+      <div class="prog-icon">🌍</div>
+      <h3>Urdu / Pashto Literature</h3>
+      <p>Study classical and contemporary Urdu and Pashto literature, language, and linguistics, with rich cultural and historical depth.</p>
+      <span class="prog-badge">BS 4-Year Program</span>
+      <span class="prog-hint">View subjects →</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Program detail modal ── -->
+<div class="modal-overlay" id="programModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeProgramModal()" aria-label="Close">✕</button>
+    <div class="modal-icon" id="modalIcon"></div>
+    <h2 id="modalTitle"></h2>
+    <span class="modal-badge" id="modalBadge"></span>
+    <h3>Core Subjects</h3>
+    <ul class="modal-subjects" id="modalSubjects"></ul>
+    <h3>Career Paths</h3>
+    <div class="modal-careers" id="modalCareers"></div>
+    <div class="modal-note">
+      Plus compulsory courses in all programs: English, Islamic Studies/Ethics, Pakistan Studies, and Communication Skills.
+    </div>
+  </div>
+</div>
+
+<section class="admission" id="admission">
+  <p class="section-label">Ready to Apply?</p>
+  <h2 class="section-title">Start Your <span style="color:var(--gold)">Degree Journey</span></h2>
+  <p class="section-desc">Check eligibility criteria and required documents on our admissions page.</p>
+  <a href="admissions.html" class="btn btn-primary">Go to Admissions</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">KDC</div>
+      <p>Khyber Degree College — providing quality higher education to the youth of Swat Valley since our establishment. Affiliated with the University of Swat.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs.html#computer-science">Computer Science</a></li>
+        <li><a href="programs.html#english-literature">English Literature</a></li>
+        <li><a href="programs.html#zoology">Zoology</a></li>
+        <li><a href="programs.html#chemistry">Chemistry</a></li>
+        <li><a href="programs.html#mathematics">Mathematics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Kabal, Swat, KPK</a></li>
+        <li><a href="contact.html">+92-946-XXXXXX</a></li>
+        <li><a href="contact.html">info@khyberdegreecollege.edu.pk</a></li>
+        <li><a href="contact.html">Mon–Sat, 8AM–4PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Khyber Degree College, Kabal, Swat. All rights reserved.</span>
+    <span>Affiliated with University of Swat | HEC Recognized</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/programs-data.js"></script>
+</body>
+</html>
