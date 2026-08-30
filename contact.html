@@ -53,14 +53,14 @@
           <div class="contact-icon">📞</div>
           <div>
             <h4>Phone</h4>
-            <p>+92-946-XXXXXX<br>+92-3XX-XXXXXXX</p>
+            <p>+92-327-5789051</p>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">✉️</div>
           <div>
             <h4>Email</h4>
-            <p>info@khyberdegreecollege.edu.pk</p>
+            <p><a href="mailto:admission@khyberdegreecollege.com">admission@khyberdegreecollege.com</a></p>
           </div>
         </div>
         <div class="contact-item">
@@ -73,13 +73,13 @@
       </div>
     </div>
     <div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <input type="text" placeholder="Your Name" required />
-          <input type="tel" placeholder="Phone Number" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="tel" name="phone" placeholder="Phone Number" />
         </div>
-        <input type="email" placeholder="Email Address" />
-        <select>
+        <input type="email" name="email" placeholder="Email Address" required />
+        <select name="program">
           <option value="">Select Program of Interest</option>
           <option>Computer Science</option>
           <option>English Literature</option>
@@ -89,7 +89,7 @@
           <option>Mathematics</option>
           <option>Urdu / Pashto Literature</option>
         </select>
-        <textarea placeholder="Your message or query..."></textarea>
+        <textarea name="message" placeholder="Your message or query..." required></textarea>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
     </div>
@@ -130,8 +130,8 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="contact.html">Kabal, Swat, KPK</a></li>
-        <li><a href="contact.html">+92-946-XXXXXX</a></li>
-        <li><a href="contact.html">info@khyberdegreecollege.edu.pk</a></li>
+        <li><a href="contact.html">+92-327-5789051</a></li>
+        <li><a href="mailto:admission@khyberdegreecollege.com">admission@khyberdegreecollege.com</a></li>
         <li><a href="contact.html">Mon–Sat, 8AM–4PM</a></li>
       </ul>
     </div>
