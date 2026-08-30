@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Animated counters
   function animateCount(el) {
     const target = +el.dataset.target;
-    const suffix = target >= 95 ? '%' : '+';
+    const suffix = el.dataset.suffix ?? '+';
     let current = 0;
     const step = Math.ceil(target / 60);
     const timer = setInterval(() => {
@@ -45,16 +45,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Form submit (contact page)
+// Form submit (contact page) — actually delivers to Formspree, which forwards to the college inbox
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
+  const form = e.target;
+  const btn = form.querySelector('button');
   const original = btn.textContent;
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = 'var(--green2)';
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+    .then(response => {
+      if (response.ok) {
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = 'var(--green2)';
+        form.reset();
+      } else {
+        btn.textContent = 'Failed — try again';
+        btn.style.background = '#b23b3b';
+      }
+    })
+    .catch(() => {
+      btn.textContent = 'Failed — check connection';
+      btn.style.background = '#b23b3b';
+    })
+    .finally(() => {
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = original;
+        btn.style.background = '';
+      }, 3500);
+    });
 }
